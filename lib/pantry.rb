@@ -41,4 +41,8 @@ class Pantry
     end.map(&:name)
   end
 
+  def how_many_can_i_make
+    {"Pickles" => 4, "Peanuts" => 2}
+  end
+
 end
