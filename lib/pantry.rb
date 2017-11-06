@@ -1,10 +1,12 @@
 class Pantry
   attr_reader :stock,
-              :shopping_list
+              :shopping_list,
+              :cookbook
               
   def initialize
     @stock = Hash.new(0)
     @shopping_list = Hash.new(0)
+    @cookbook = []
   end
 
   def stock_check(ingredient)

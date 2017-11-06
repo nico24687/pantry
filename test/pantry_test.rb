@@ -94,4 +94,10 @@ class PantryTest < Minitest::Test
     assert_equal "* Cheese: 25\n* Flour: 20\n* Spaghetti Noodles: 10\n* Marinara Sauce: 10", pantry.print_shopping_list
   end
 
+  def test_it_has_a_cookbook
+    pantry = Pantry.new
+
+    assert_equal [], pantry.cookbook
+  end
+
 end
