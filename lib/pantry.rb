@@ -33,4 +33,18 @@ class Pantry
     cookbook << recipe
   end
 
+  def what_can_i_make
+    # go through cookbook
+    # compare each recipe to stock
+    # - go through ingredients
+    # - compare recipe ingredients to stock
+    # return recipe name if we have enough stock
+
+    cookbook.select do |recipe|
+      recipe.ingredients.
+        select { |ingredient, quantity| stock_check(ingredient) < quantity }.
+        empty?
+    end.map(&:name)
+  end
+  
 end
