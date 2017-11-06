@@ -29,4 +29,8 @@ class Pantry
     end.join("\n")
   end
 
+  def add_to_cookbook(recipe)
+    cookbook << recipe
+  end
+
 end
