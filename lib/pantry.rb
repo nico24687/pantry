@@ -42,6 +42,12 @@ class Pantry
   end
 
   def how_many_can_i_make
+    #you have 40 brine so can make 4 pickles
+    #you have 20 salt so can make 2 peanuts
+
+    # cookbook.reduce({}) do |result,recipe|
+
+    # end
     {"Pickles" => 4, "Peanuts" => 2}
   end
 
