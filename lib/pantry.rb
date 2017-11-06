@@ -4,9 +4,9 @@ class Pantry
               :cookbook
               
   def initialize
-    @stock = Hash.new(0)
+    @stock         = Hash.new(0)
     @shopping_list = Hash.new(0)
-    @cookbook = []
+    @cookbook      = []
   end
 
   def stock_check(ingredient)
@@ -34,17 +34,11 @@ class Pantry
   end
 
   def what_can_i_make
-    # go through cookbook
-    # compare each recipe to stock
-    # - go through ingredients
-    # - compare recipe ingredients to stock
-    # return recipe name if we have enough stock
-
     cookbook.select do |recipe|
       recipe.ingredients.
         select { |ingredient, quantity| stock_check(ingredient) < quantity }.
         empty?
     end.map(&:name)
   end
-  
+
 end
