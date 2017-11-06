@@ -20,5 +20,11 @@ class Pantry
       new_amount + old_amount
      end 
   end
-  
+
+  def print_shopping_list
+    shopping_list.map do |ingredient,amount|
+      "* #{ingredient}: #{amount}"
+    end.join("\n")
+  end
+
 end
